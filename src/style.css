@@ -1,0 +1,660 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.header {
+    background-color: black;
+    z-index: 99;
+}
+
+/* 우측 상단 네비게이션 바 */
+.nav {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    opacity: 0%;
+}
+
+/* 상단바 고정 */
+.nav_fix {
+    position: fixed;
+    opacity: 100%
+}
+
+
+
+/* 배경화면과 얼굴 소개가 들어가는 공간 */
+.main {
+    height: 100%;
+    position: sticky;
+}
+
+/* 네비게이션 바 서식 */
+.Home, .career, .skills, .aboutMe, .contact {
+    font-size: 26px;
+    font-weight: bold;
+    background-color: transparent;
+    border: transparent;
+    color: white;
+    height: 50px;
+    cursor: pointer;
+}
+
+.Home {
+    position: relative;
+    left: -1900px;
+    color: white;
+    font-size: 30px;
+}
+
+/* 뒤쪽 배경화면 서식 */
+.img {
+    height: 100%;
+    position: relative;
+    opacity: 30%;
+    border-bottom: 1px solid dimgray;
+}
+
+/* 얼굴 사진 서식 */
+.face {
+    width: 370px;
+    position: absolute;
+    top: 2060px;
+    left: 235px;
+    border-radius: 5%;
+    border: 10px;
+    border: 1px solid darkgray;
+}
+
+.searchIcon {
+    position: relative;
+    top: 330px;
+    left: 560px;
+    height: 100px;
+}
+
+/* 메인 화면 큰 글씨 서식 */
+.introduce {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    font-size: 160px;
+    top: 35%;
+    left: 5%;
+}
+
+/* 이름,연락처 등의 정보 서식 */
+.introduceDetail {
+    top: 31%;
+    left: 23%;
+    color: white;
+    float: right;
+    display: inline-block;
+    position: absolute;
+}
+
+.aboutMeDetailArea {
+    display: inline-block;
+}
+
+.aboutMeDetailTitle {
+    position: relative;
+    color: white;
+    font-size: 47px;
+    font-weight: bold;
+    top: 345px;
+    left: 660px;
+    color: greenyellow;
+}
+
+.aboutMeDetail {
+    position: relative;
+    color: white;
+    font-size: 22px;
+    top: 360px;
+    left: 660px;
+    line-height: 45px;
+}
+
+/* 소개 카테고리 서식 */
+.category {
+    font-size: 37px;
+    font-weight: bold;
+}
+
+/* 소개 세부내용 서식 */
+.detail {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.aboutMeArea {
+    height: 1350px;
+}
+
+/* 경력에 대한 내용을 보여주는 영역 */
+.careerArea {
+    height: 1350px;
+}
+
+/* 기술에 대한 내용을 보여주는 영역 */
+.skillsArea {
+    height: 1500px;
+    border-bottom: 1px solid dimgrey;
+}
+
+.contactArea {
+    height: 600px;
+}
+
+.cardContainer {
+    perspective: 1000px;
+}
+
+.contactCard {
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.contactCardFront, .contactCardBack {
+    backface-visibility: hidden;
+    position: absolute;
+    left: 950px;
+    display: inline;
+}
+
+.contactCardFront {
+    height: 370px;
+    background-color: white;
+    aspect-ratio: 5/3;
+    margin: auto;
+    margin-top: 30px;
+    transform: rotateY(180deg);
+}
+
+.contactCardBack {
+    height: 370px;
+    background-color: white;
+    aspect-ratio: 5/3;
+    margin: auto;
+    margin-top: 30px;
+}
+
+/* '경력 기술' 서식 */
+.aboutMeWrite, .careerWrite, .skillsWrite {
+    position: absolute;
+    margin-top: 165px;
+    left: 290px;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+}
+
+.careerSemiWrite {
+    color: white;
+    font-size: 16px;
+}
+
+.contactWrite {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    margin-top: 90px;
+}
+
+.cardName, .cardJob, .cardCompany, .cardMobile, .cardEmail, .cardTel, .cardAddr {
+    padding-left: 70px;
+}
+
+.cardLine {
+    width: 500px;
+    margin-left: 60px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.cardName {
+    padding-top: 90px;
+}
+
+.cardName, .cardCompany {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cardCompany {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.cardJob {
+    color: dimgray;
+    font-size: 17px;
+}
+
+.cardMobile, .cardEmail, .cardTel, .cardAddr {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.cardDetail, .cardAddr {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+/* '경력 기술' 하단 수평선 서식 */
+.careerWriteLine, .skillsWriteLine, .aboutMeWriteLine {
+    position: relative;
+    top: 280px;
+    left: 225px;
+    width: 65%;
+}
+
+.skillsTable {
+    position: relative;
+    bottom: 3040px;
+}
+
+/* 세로선 위에 올리는 작은 원 서식 */
+.radius1 {
+    position: relative;
+    display: inline-block;
+    left: 636px;
+    top: 130px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid greenyellow;
+    background-color: greenyellow;
+    border-radius: 50%;
+}
+
+.radius2 {
+    position: relative;
+    display: inline-block;
+    left: 617px;
+    top: 243px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid greenyellow;
+    background-color: greenyellow;
+    border-radius: 50%;
+}
+
+.radius3 {
+    position: relative;
+    display: inline-block;
+    left: 597px;
+    top: 357px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid greenyellow;
+    background-color: greenyellow;
+    border-radius: 50%;
+}
+
+/* 경력 세로선 서식 */
+.careerDetailLine {
+    position: relative;
+    display: inline-block;
+    top: 351px;
+    left: 650px;
+    height:16vh;
+    width: 1px;
+    background-color: greenyellow;
+    color: greenyellow;
+    border-color: greenyellow;
+}
+
+/* 경력이 서술된 테이블 서식 */
+.careerDetail {
+    position: absolute;
+    margin-top: 100px;
+    left: 250px;
+    color: white;
+}
+
+/* 어떤 경력을 쌓았는지에 대한 서식 */
+.careerMain {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* 경력을 쌓은 시간에 대한 서식 */
+.careerYear {
+    font-family: 'Gowun Batang', serif;
+    color: greenyellow;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 경력에 대한 세부 설명에 대한 서식 */
+.careerExplain {
+    font-size: 21px;
+}
+
+/* 테이블(사진과 아래 글씨)에 대한 서식 */
+.htmlTable, .cssTable, .javascriptTable, .javaTable, .mysqlTable {
+    position: absolute;
+    left: 300px;
+    width: 1680px;
+}
+
+.htmlTable {
+    top: 3380px;
+}
+
+.cssTable {
+    top: 3520px;
+}
+
+.javascriptTable {
+    top: 3660px;
+}
+
+.javaTable {
+    top: 3810px;
+}
+
+.mysqlTable {
+    top: 3970px;
+}
+
+/* 이미지 서식 */
+.html, .css, .javascript, .java, .mysql {
+    height: 90px;
+}
+
+/* 이미지 아래 작은 글씨에 대한 서식 */
+.imgExplain {
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* 자바스크립트 사진 크기가 살짝 커서 글씨를 오른쪽으로 약간 이동시킴 */
+#javascript {
+    margin-left: 12px;
+    margin-right: 15px;
+}
+
+/* 그래프를 넣을 td 태그에 대한 서식 */
+.tdGraph {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+/* 그래프 뒷 영역에 대한 서식 */
+.graph {
+    background: white;
+    width: 60%;
+    height: 40px;
+    border-radius: 40px;
+    display: block;
+}
+
+/* 그래프 앞 영역에 대한 서식 */
+.graphHTML, .graphCSS, .graphJavascript, .graphJava, .graphMysql {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    background: greenyellow ;
+    border-radius: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.graphHTML {
+    width: 70%;
+    animation: html 2s 1;
+}
+
+/* 그래프 애니메이션 */
+@keyframes html {
+    0% {
+        width: 0;
+        color: rgba(255,255,255,0);
+    }
+    50% {
+        color: greenyellow;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+.graphCSS {
+    width: 60%;
+    animation: css 2s 1;
+}
+
+@keyframes css {
+    0% {
+        width: 0;
+        color: rgba(255,255,255,0);
+    }
+    40% {
+        color: greenyellow;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+.graphJavascript {
+    width: 30%;
+    animation: javascript 2s 1;
+}
+
+@keyframes javascript {
+    0% {
+        width: 0;
+        color: rgba(255,255,255,0);
+    }
+    10% {
+        color: greenyellow;
+    }
+    100% {
+        width: 30%;
+    }
+}
+
+.graphJava {
+    width: 60%;
+    animation: java 2s 1;
+}
+
+@keyframes java {
+    0% {
+        width: 0;
+        color: rgba(255,255,255,0);
+    }
+    40% {
+        color: greenyellow;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+.graphMysql {
+    width: 40%;
+    animation: mySql 2s 1;
+}
+
+@keyframes mySql {
+    0% {
+        width: 0;
+        color: rgba(255,255,255,0);
+    }
+    20% {
+        color: greenyellow;
+    }
+    100% {
+        width: 40%;
+    }
+}
+
+.footer {
+    height: 170px;
+    background-color: #29282a;
+    display: flex;
+}
+
+.right {
+    position: relative;
+    display: flex;
+    font-size: 18px;
+    color: white;
+    left: 1125px;
+    top: 102px;
+    color: black;
+}
+
+.contactImg {
+    position: relative;
+    display: flex;
+    top: 10px;
+    left: 1220px;
+    text-align: center;
+}
+
+.email, .github {
+    height: 50px;
+}
+
+.email {
+    height: 53px;
+    margin-top: 1px;
+    margin-right: 23px;
+}
+
+.arrow {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    background-color: dimgray;
+    opacity: 0.5;
+    border-radius: 20%;
+    top: 595px;
+    left: 2420px;
+    cursor: pointer;
+}
+
+.arrow_fix {
+    position: fixed;
+    left: 2420px;
+    top: 1348px;
+}
+
+.arrow::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    transform: translate(-50%, -65%) rotate(45deg);
+    border-color: black;
+    border-radius: 20%;
+}
+
+.arrow::after {
+    content: '';
+    width: 26px;
+    height: 3px;
+    position: absolute;
+    left: 27%;
+    top: 55%;
+    transform: translateY(-85%) rotate(90deg);
+    background-color: black;
+    border-radius: 20%;
+}
+
+.inhatc {
+    margin-top: 80px;
+    margin-left: 210px;
+}
+
+.spanHtml, .spanCss, .spanJavascript, .spanJava, .spanMysql {
+    position: relative;
+}
+
+.spanHtml .tooltipHtml, .spanCss .tooltipCss, .spanJavascript .tooltipJavascript,
+.spanJava .tooltipJava, .spanMysql .tooltipMysql {
+    visibility: hidden;
+    width: 500px;
+    background-color: white;
+    color: black;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    font-size: 15px;
+    font-weight: bold;
+    left: 32px;
+}
+
+.spanHtml .tooltipHtml, .spanCss .tooltipCss {
+    top: -112px;
+}
+
+
+.spanJavascript .tooltipJavascript {
+    top: -132px;
+}
+
+.spanJava .tooltipJava {
+    top: -125px;
+}
+
+.spanMysql .tooltipMysql {
+    top: -120px;
+}
+
+.spanHtml:hover .tooltipHtml, .spanCss:hover .tooltipCss, .spanJavascript:hover .tooltipJavascript,
+.spanJava:hover .tooltipJava, .spanMysql:hover .tooltipMysql {
+    visibility: visible;
+}
+
+.spanHtml .tooltipHtml::after, .spanCss .tooltipCss::after, .spanJavascript .tooltipJavascript::after,
+.spanJava .tooltipJava::after, .spanMysql .tooltipMysql::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 12px;
+    top: 110%;
+    left: 5%;
+    margin: -5px;
+    border-color: white transparent transparent transparent;
+}
+
+.spanJavascript .tooltipJavascript::after {
+    top: 105%;
+}
+
+/* aos 애니메이션 가지고 있는 콘텐츠 뒤로 보내기 */
+[data-aos] {
+    pointer-events: none;
+}
+.aos-animate {
+    pointer-events: auto;
+}
+.aos-init[data-aos][data-aos].aos-animate {
+    transform: unset;
+}

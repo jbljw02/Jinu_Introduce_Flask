@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Lee Jinu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!--    &lt;!&ndash;    제이쿼리 툴팁 UI, 부트스트랩 툴팁 템플릿&ndash;&gt;-->
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>-->
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>-->
+
+    <script type="text/javascript" src="event.js"></script>
+    <script type="text/javascript" src="qrcode.js"></script>
+</head>
+<body>
+<!-- 사진, 소개, 헤더가 있는 영역 -->
+    <section class="main" id="main">
+        <img src="img/sec.png" class="img">
+        <div class="introduce"></div>
+        <script>
+            let content = "White-hat \n hacker \n Lee Jinu";
+            let text = document.querySelector('.introduce');
+            let i = 0;
+            function typing() {
+                if(i < content.length)
+                {
+                    let txt = content.charAt(i);
+                    text.innerHTML += txt === "\n" ? "<br/>" : txt;
+                    i++;
+                }
+            }
+            setInterval(typing, 100);
+        </script>
+        <header class="header">
+            <nav class="nav">
+                <button onclick="goToAboutMe('aboutMeArea')" class="aboutMe" id="aboutMe">
+                    About me &nbsp;
+                </button>
+                <button onclick="goToCareer('careerArea')" class="career" id="career">
+                    Career &nbsp;
+                </button>
+                <button onclick="goToSkills('skillsArea')" class="skills" id="skills">
+                    Skills &nbsp;
+                </button>
+                <button onclick="goToContact('contactArea')" class="contact" id="contact">
+                    Contact
+                </button>
+            </nav>
+        </header>
+    </section>
+
+<!--나에 대한 소개가 있는 영역-->
+    <section class="aboutMeArea" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+             data-aos-delay="300" data-aos-offset="0">
+        <div class="aboutMeWrite">
+            소개
+        </div>
+        <hr class="aboutMeWriteLine" >
+        <div class="aboutMeDetailArea">
+            <img src="img/face.jpg" class="face">
+            <img src="C:\IntellijProject\resumeJinu\src/img\search.gif"
+            class="searchIcon">
+            <div class="aboutMeDetailTitle">
+                안녕하세요, 모의해킹 유망주 이진우라고 합니다.
+            </div>
+            <div class="aboutMeDetail">
+                저는 모의해킹과 프론트엔드 개발에 관심을 가지고 있는 이진우입니다. <br>
+                저는 인하공업전문대학에서 컴퓨터시스템을 전공하였습니다. <br>
+                3년동안 프로그래밍 언어, 운영체제, 데이터베이스를 비롯한 컴퓨터공학에 기반을 두는 여러 분야를 폭 넓게 공부하였습니다. <br>
+                또한 재학하면서 10개에 가까운 프로젝트를 개인 및 팀별로 진행하였습니다. <br>
+                이는 단순 이론에서 그치는 것이 아닌 실무 중심의 지식을 습득하는 데에 도움을 주었습니다. <br>
+                3년 과정을 마친 뒤에는 4학년 전공심화 과정을 밟아 학사 학위를 취득함으로써 관심 분야에 대한 보다 폭 넓은 학습을 하였습니다. <br>
+                현재는 Javascript에 흥미를 느끼고 공부중입니다.
+            </div>
+        </div>
+    </section>
+
+<!-- 경력에 대한 소개가 있는 영역 -->
+    <section class="careerArea" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+             data-aos-delay="300" data-aos-offset="0">
+        <div class="careerWrite">
+            경력 기술
+        </div>
+        <hr class="careerWriteLine">
+        <div>
+            <hr class="careerDetailLine">
+            <span class="radius1"></span>
+            <span class="radius2"></span>
+            <span class="radius3"></span>
+            <table class="careerDetail">
+                <tr>
+                    <td class="careerMain">인하공업전문대학</td>
+                    <td class="careerExplain">인하공업전문대학의 컴퓨터시스템과에 진학하여</td>
+                </tr>
+                <tr>
+                    <td class="careerYear">2019.03 - 2023.12</td>
+                    <td class="careerExplain">3년 과정을 수료하였습니다.</td>
+                </tr>
+                <tr>
+                    <td><br><br></td>
+                </tr>
+                <tr>
+                    <td class="careerMain">인하공업전문대학 전공심화&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td class="careerExplain">인하공업전문대학에서 4학년 학사과정을</td>
+                </tr>
+                <tr>
+                    <td class="careerYear">2024.03 - 2024.12</td>
+                    <td class="careerExplain">수료하였습니다.</td>
+                </tr>
+        </table>
+        </div>
+    </section>
+
+<!-- 할 수 있는 언어, 자격증 등을 기술하는 영역 -->
+    <section class="skillsArea" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+             data-aos-delay="300" data-aos-offset="0">
+        <div class="skillsWrite">
+            내가 할 수 있는 것 & 가진 것
+        </div>
+        <hr class="skillsWriteLine">
+        <div class="skillsTable">
+            <tr>
+                <td>
+            <table class="htmlTable">
+                <tr>
+                    <td>
+                        <span class="spanHtml">
+                            <img src="img/html.png" class="html">
+                            <span class="tooltipHtml">
+                                <ul>&nbsp;&nbsp;- Semantic HTML을 준수하여 구조를 설계합니다.</ul>
+                                <ul>&nbsp;&nbsp;- Box model을 어느 정도 이해하고 있습니다.</ul>
+                            </span>
+                        </span>
+                    </td>
+                    <td class="tdGraph">
+                        <div class="graph">
+                            <span class="graphHTML">70%</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="imgExplain">
+                        &nbsp;&nbsp;&nbsp;HTML <br><br>
+                    </td>
+                </tr>
+            </table>
+                </td>
+            </tr>
+            <table class="cssTable">
+                <tr>
+                    <td>
+                        <span class="spanCss">
+                            <img src="img/css.png" class="css">
+                            <span class="tooltipCss">
+                                <ul>&nbsp;&nbsp;- 미디어 쿼리와 같은 간단한 CSS문법을 사용할 수 있습니다.</ul>
+                                <ul>&nbsp;&nbsp;- flex를 적극 활용하여 UI를 구성합니다.</ul>
+                            </span>
+                        </span>
+                    </td>
+                    <td class="tdGraph">
+                        <div class="graph">
+                            <span class="graphCSS">60%</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="imgExplain">
+                        &nbsp;&nbsp;&nbsp;&nbsp;CSS <br><br>
+                    </td>
+                </tr>
+            </table>
+            <table class="javascriptTable">
+                <tr>
+                    <td>
+                        <span class="spanJavascript">
+                            <img src="img/javascript.png" class="javascript" id="javascript">
+                            <span class="tooltipJavascript">
+                                <ul>&nbsp;&nbsp;- 기초적인 Javascript 문법을 이해하고 있습니다.</ul>
+                                <ul>&nbsp;&nbsp;- 동적 페이지를 위한 간단한 효과들을 구현할 수 있습니다.</ul>
+                                <ul>&nbsp;&nbsp;- JQuery의 간단한 셀렉터와 실행 문법을 사용할 수 있습니다.</ul>
+                            </span>
+                        </span>
+                    </td>
+                    <td class="tdGraph">
+                        <div class="graph">
+                            <span class="graphJavascript">30%</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="imgExplain">
+                        JavaScript <br><br>
+                    </td>
+                </tr>
+            </table>
+            <table class="javaTable">
+                <tr>
+                    <td>
+                        <span class="spanJava">
+                            <img src="img/java.png" class="java">
+                            <span class="tooltipJava">
+                                <ul>&nbsp;&nbsp;- 간단한 문법을 이해하고 프로그램을 작성할 수 있습니다.</ul>
+                                <ul>&nbsp;&nbsp;- 객체지향에 대한 개념을 어느정도 이해하고 있습니다.</ul>
+                            </span>
+                        </span>
+                    </td>
+                    <td class="tdGraph">
+                        <div class="graph">
+                            <span class="graphJava">60%</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="imgExplain">
+                        &nbsp;&nbsp;&nbsp;JAVA <br><br>
+                    </td>
+                </tr>
+            </table>
+            <table class="mysqlTable">
+                <tr>
+                    <td>
+                        <span class="spanMysql">
+                            <img src="img/mysql.png" class="mysql">
+                            <span class="tooltipMysql">
+                                <ul>&nbsp;&nbsp;- 간단한 수준의 데이터베이스를 직접 설계 및 구현할 수 있습니다.</ul>
+                                <ul>&nbsp;&nbsp;- 정규화에 대해 이해하고 있습니다.</ul>
+                                <ul></ul>
+                            </span>
+                        </span>
+                    </td>
+                    <td class="tdGraph">
+                        <div class="graph">
+                            <span class="graphMysql">40%</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="imgExplain">
+                        &nbsp;&nbsp;MySQL
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+<!-- 연락처, 연락할 수 있는 방법을 기술하는 영역 -->
+    <section class="contactArea">
+        <div class="contactWrite">
+            CONTACT
+        </div>
+        <div class="cardContainer">
+            <div class="contactCard">
+                <div class="contactCardBack">
+                    <span id="qrcode"></span>
+                        <script type="text/javascript">
+                            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                                text: "https://open.kakao.com/o/ss4ZQq5e",
+                                width: 128,
+                                height: 128,
+                                colorDark : "#000000",
+                                colorLight : "#ffffff",
+                                correctLevel : QRCode.CorrectLevel.H
+                            });
+                        </script>
+                        <ul class="cardName">
+                            이진우
+                        </ul>
+                        <ul class="cardJob">
+                            보안컨설턴트
+                        </ul>
+                        <hr class="cardLine">
+                        <ul class="cardCompany">
+                            인하공업전문대학
+                        </ul>
+                        <ul class="cardMobile">
+                            Mobile <span class="cardDetail">010-8511-3589</span>
+                        </ul>
+                        <ul class="cardEmail">
+                            E-mail <span class="cardDetail">jbljw02@naver.com</span>
+                        </ul>
+                        <ul class="cardTel">
+                            Tel <span class="cardDetail">032-870-2114</span>
+                        </ul>
+                        <ul class="cardAddr">
+                            인천광역시 미추홀구 인하로 100
+                        </ul>
+                </div>
+                <div class="contactCardFront">
+                    <img src="img/inhatc.png" class="inhatc">
+                </div>
+            </div>
+        </div>
+        <button onclick="goToTop('main')" class="arrow"></button>
+    </section>
+
+    <footer class="footer">
+        <div>
+           <span class="right">
+                © by LeeJinu 2023. All rights reserved.
+           </span>
+            <span class="contactImg">
+                <a target="_blank" href="mailto:jbljw02@naver.com"><img src="img/email.png" class="email"></a>
+                <a target="_blank" href="https://github.com/jbljw02"><img src="img/github.png" class="github"></a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
