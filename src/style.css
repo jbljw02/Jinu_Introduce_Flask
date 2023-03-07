@@ -21,18 +21,11 @@ body {
     opacity: 0%;
 }
 
-/* 상단바 고정 */
-.nav_fix {
-    position: fixed;
-    opacity: 100%
-}
-
-
-
-/* 배경화면과 얼굴 소개가 들어가는 공간 */
-.main {
-    height: 100%;
-    position: sticky;
+.Home {
+    position: relative;
+    left: -1900px;
+    color: white;
+    font-size: 30px;
 }
 
 /* 네비게이션 바 서식 */
@@ -46,11 +39,16 @@ body {
     cursor: pointer;
 }
 
-.Home {
-    position: relative;
-    left: -1900px;
-    color: white;
-    font-size: 30px;
+/* 상단바 고정 */
+.nav_fix {
+    position: fixed;
+    opacity: 100%
+}
+
+/* 배경화면과 얼굴 소개가 들어가는 공간 */
+.main {
+    height: 100%;
+    position: sticky;
 }
 
 /* 뒤쪽 배경화면 서식 */
@@ -59,6 +57,16 @@ body {
     position: relative;
     opacity: 30%;
     border-bottom: 1px solid dimgray;
+}
+
+/* 메인 화면 큰 글씨 서식 */
+.introduce {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    font-size: 160px;
+    top: 35%;
+    left: 5%;
 }
 
 /* 얼굴 사진 서식 */
@@ -72,6 +80,7 @@ body {
     border: 1px solid darkgray;
 }
 
+/* 돋보기 아이콘 서식 */
 .searchIcon {
     position: relative;
     top: 330px;
@@ -79,30 +88,35 @@ body {
     height: 100px;
 }
 
-/* 메인 화면 큰 글씨 서식 */
-.introduce {
-    color: white;
+/* 소개 영역 서식 */
+.aboutMeArea {
+    height: 1350px;
+}
+
+/* 제목 서식 */
+.aboutMeWrite, .careerWrite, .skillsWrite {
+    position: absolute;
+    margin-top: 165px;
+    left: 290px;
+    font-size: 60px;
     font-weight: bold;
-    position: absolute;
-    font-size: 160px;
-    top: 35%;
-    left: 5%;
-}
-
-/* 이름,연락처 등의 정보 서식 */
-.introduceDetail {
-    top: 31%;
-    left: 23%;
     color: white;
-    float: right;
-    display: inline-block;
-    position: absolute;
 }
 
+/* 제목 하단 수평선 서식 */
+.aboutMeWriteLine, .careerWriteLine, .skillsWriteLine {
+    position: relative;
+    top: 280px;
+    left: 225px;
+    width: 65%;
+}
+
+/* 소개 영역 세부 내용에 대한 서식 */
 .aboutMeDetailArea {
     display: inline-block;
 }
 
+/* 소개 내용의 큰 글씨 서식 */
 .aboutMeDetailTitle {
     position: relative;
     color: white;
@@ -113,6 +127,7 @@ body {
     color: greenyellow;
 }
 
+/* 소개 내용의 서식 */
 .aboutMeDetail {
     position: relative;
     color: white;
@@ -122,184 +137,9 @@ body {
     line-height: 45px;
 }
 
-/* 소개 카테고리 서식 */
-.category {
-    font-size: 37px;
-    font-weight: bold;
-}
-
-/* 소개 세부내용 서식 */
-.detail {
-    font-size: 23px;
-    margin-bottom: 20px;
-}
-
-.aboutMeArea {
-    height: 1350px;
-}
-
 /* 경력에 대한 내용을 보여주는 영역 */
 .careerArea {
     height: 1350px;
-}
-
-/* 기술에 대한 내용을 보여주는 영역 */
-.skillsArea {
-    height: 1500px;
-    border-bottom: 1px solid dimgrey;
-}
-
-.contactArea {
-    height: 600px;
-}
-
-.cardContainer {
-    perspective: 1000px;
-}
-
-.contactCard {
-    position: relative;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-}
-
-.contactCardFront, .contactCardBack {
-    backface-visibility: hidden;
-    position: absolute;
-    left: 950px;
-    display: inline;
-}
-
-.contactCardFront {
-    height: 370px;
-    background-color: white;
-    aspect-ratio: 5/3;
-    margin: auto;
-    margin-top: 30px;
-    transform: rotateY(180deg);
-}
-
-.contactCardBack {
-    height: 370px;
-    background-color: white;
-    aspect-ratio: 5/3;
-    margin: auto;
-    margin-top: 30px;
-}
-
-/* '경력 기술' 서식 */
-.aboutMeWrite, .careerWrite, .skillsWrite {
-    position: absolute;
-    margin-top: 165px;
-    left: 290px;
-    font-size: 60px;
-    font-weight: bold;
-    color: white;
-}
-
-.careerSemiWrite {
-    color: white;
-    font-size: 16px;
-}
-
-.contactWrite {
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    color: white;
-    margin-top: 90px;
-}
-
-.cardName, .cardJob, .cardCompany, .cardMobile, .cardEmail, .cardTel, .cardAddr {
-    padding-left: 70px;
-}
-
-.cardLine {
-    width: 500px;
-    margin-left: 60px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.cardName {
-    padding-top: 90px;
-}
-
-.cardName, .cardCompany {
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.cardCompany {
-    font-size: 24px;
-    padding-bottom: 10px;
-}
-
-.cardJob {
-    color: dimgray;
-    font-size: 17px;
-}
-
-.cardMobile, .cardEmail, .cardTel, .cardAddr {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 28px;
-}
-
-.cardDetail, .cardAddr {
-    font-weight: lighter;
-    font-size: 16px;
-}
-
-/* '경력 기술' 하단 수평선 서식 */
-.careerWriteLine, .skillsWriteLine, .aboutMeWriteLine {
-    position: relative;
-    top: 280px;
-    left: 225px;
-    width: 65%;
-}
-
-.skillsTable {
-    position: relative;
-    bottom: 3040px;
-}
-
-/* 세로선 위에 올리는 작은 원 서식 */
-.radius1 {
-    position: relative;
-    display: inline-block;
-    left: 636px;
-    top: 130px;
-    width: 10px;
-    height: 10px;
-    border: 2px solid greenyellow;
-    background-color: greenyellow;
-    border-radius: 50%;
-}
-
-.radius2 {
-    position: relative;
-    display: inline-block;
-    left: 617px;
-    top: 243px;
-    width: 10px;
-    height: 10px;
-    border: 2px solid greenyellow;
-    background-color: greenyellow;
-    border-radius: 50%;
-}
-
-.radius3 {
-    position: relative;
-    display: inline-block;
-    left: 597px;
-    top: 357px;
-    width: 10px;
-    height: 10px;
-    border: 2px solid greenyellow;
-    background-color: greenyellow;
-    border-radius: 50%;
 }
 
 /* 경력 세로선 서식 */
@@ -313,6 +153,29 @@ body {
     background-color: greenyellow;
     color: greenyellow;
     border-color: greenyellow;
+}
+
+/* 세로선 위에 올리는 작은 원 서식 */
+.radius1, .radius2, .radius3 {
+    position: relative;
+    display: inline-block;
+    left: 636px;
+    top: 130px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid greenyellow;
+    background-color: greenyellow;
+    border-radius: 50%;
+}
+
+.radius2 {
+    left: 617px;
+    top: 243px;
+}
+
+.radius3 {
+    left: 597px;
+    top: 357px;
 }
 
 /* 경력이 서술된 테이블 서식 */
@@ -341,6 +204,18 @@ body {
 /* 경력에 대한 세부 설명에 대한 서식 */
 .careerExplain {
     font-size: 21px;
+}
+
+/* 기술에 대한 내용을 보여주는 영역 */
+.skillsArea {
+    height: 1500px;
+    border-bottom: 1px solid dimgrey;
+}
+
+/* 기술에 대한 내용을 담고 있는 테이블 */
+.skillsTable {
+    position: relative;
+    bottom: 3040px;
 }
 
 /* 테이블(사진과 아래 글씨)에 대한 서식 */
@@ -509,12 +384,172 @@ body {
     }
 }
 
+/* 말풍선과 이미지를 담을 영역 */
+.spanHtml, .spanCss, .spanJavascript, .spanJava, .spanMysql {
+    position: relative;
+}
+
+.spanHtml .tooltipHtml, .spanCss .tooltipCss, .spanJavascript .tooltipJavascript,
+.spanJava .tooltipJava, .spanMysql .tooltipMysql {
+    visibility: hidden;
+    width: 500px;
+    background-color: white;
+    color: black;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    font-size: 15px;
+    font-weight: bold;
+    left: 32px;
+}
+
+.spanHtml .tooltipHtml, .spanCss .tooltipCss {
+    top: -112px;
+}
+
+.spanJavascript .tooltipJavascript {
+    top: -132px;
+}
+
+.spanJava .tooltipJava {
+    top: -125px;
+}
+
+.spanMysql .tooltipMysql {
+    top: -120px;
+}
+
+/* 영역에 마우스를 올리면 말풍선이 올라옴 */
+.spanHtml:hover .tooltipHtml, .spanCss:hover .tooltipCss, .spanJavascript:hover .tooltipJavascript,
+.spanJava:hover .tooltipJava, .spanMysql:hover .tooltipMysql {
+    visibility: visible;
+}
+
+.spanHtml .tooltipHtml::after, .spanCss .tooltipCss::after, .spanJavascript .tooltipJavascript::after,
+.spanJava .tooltipJava::after, .spanMysql .tooltipMysql::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 12px;
+    top: 110%;
+    left: 5%;
+    margin: -5px;
+    border-color: white transparent transparent transparent;
+}
+
+.spanJavascript .tooltipJavascript::after {
+    top: 105%;
+}
+
+/* contact 영역에 대한 서식 */
+.contactArea {
+    height: 600px;
+}
+
+/* Contact 영역의 제목에 대한 서식 */
+.contactWrite {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    margin-top: 90px;
+}
+
+/* 명함을 넣을 컨테이너에 대한 서식 */
+.cardContainer {
+    perspective: 1000px;
+}
+
+/* 명함에 대한 서식 */
+.contactCard {
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+/* 명함 뒷면의 사진에 대한 서식 */
+.inhatc {
+    margin-top: 80px;
+    margin-left: 210px;
+}
+
+/* 명함의 앞, 뒤에 대한 서식 */
+.contactCardFront, .contactCardBack {
+    backface-visibility: hidden;
+    position: absolute;
+    left: 950px;
+    display: inline-block;
+}
+
+.contactCardFront {
+    height: 370px;
+    background-color: white;
+    aspect-ratio: 5/3;
+    margin-top: 30px;
+    transform: rotateY(180deg);
+}
+
+.contactCardBack {
+    height: 370px;
+    background-color: white;
+    aspect-ratio: 5/3;
+    margin-top: 30px;
+}
+
+/* 명함에 있는 수평선 */
+.cardLine {
+    width: 500px;
+    margin-left: 60px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* 명함에 있는 글씨들의 왼쪽 공백 설정 */
+.cardName, .cardJob, .cardCompany, .cardMobile, .cardEmail, .cardTel, .cardAddr {
+    padding-left: 70px;
+}
+
+.cardName {
+    padding-top: 90px;
+}
+
+.cardName, .cardCompany {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cardCompany {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.cardJob {
+    color: dimgray;
+    font-size: 17px;
+}
+
+.cardMobile, .cardEmail, .cardTel, .cardAddr {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.cardDetail, .cardAddr {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+/* 최하단 영역에 대한 서식 */
 .footer {
     height: 170px;
     background-color: #29282a;
     display: flex;
 }
 
+/* 저작권에 대한 글씨에 대한 서식 */
 .right {
     position: relative;
     display: flex;
@@ -525,6 +560,7 @@ body {
     color: black;
 }
 
+/* 이미지를 넣을 영역에 대한 서식 */
 .contactImg {
     position: relative;
     display: flex;
@@ -533,16 +569,19 @@ body {
     text-align: center;
 }
 
-.email, .github {
+/* 깃허브 이미지에 대한 서식 */
+.github {
     height: 50px;
 }
 
+/* 이메일 이미지에 대한 서식 */
 .email {
     height: 53px;
     margin-top: 1px;
     margin-right: 23px;
 }
 
+/* 화살표 버튼에 대한 서식 */
 .arrow {
     width: 60px;
     height: 60px;
@@ -555,6 +594,7 @@ body {
     cursor: pointer;
 }
 
+/* 화살표 고정 */
 .arrow_fix {
     position: fixed;
     left: 2420px;
@@ -583,69 +623,6 @@ body {
     transform: translateY(-85%) rotate(90deg);
     background-color: black;
     border-radius: 20%;
-}
-
-.inhatc {
-    margin-top: 80px;
-    margin-left: 210px;
-}
-
-.spanHtml, .spanCss, .spanJavascript, .spanJava, .spanMysql {
-    position: relative;
-}
-
-.spanHtml .tooltipHtml, .spanCss .tooltipCss, .spanJavascript .tooltipJavascript,
-.spanJava .tooltipJava, .spanMysql .tooltipMysql {
-    visibility: hidden;
-    width: 500px;
-    background-color: white;
-    color: black;
-    text-align: left;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    font-size: 15px;
-    font-weight: bold;
-    left: 32px;
-}
-
-.spanHtml .tooltipHtml, .spanCss .tooltipCss {
-    top: -112px;
-}
-
-
-.spanJavascript .tooltipJavascript {
-    top: -132px;
-}
-
-.spanJava .tooltipJava {
-    top: -125px;
-}
-
-.spanMysql .tooltipMysql {
-    top: -120px;
-}
-
-.spanHtml:hover .tooltipHtml, .spanCss:hover .tooltipCss, .spanJavascript:hover .tooltipJavascript,
-.spanJava:hover .tooltipJava, .spanMysql:hover .tooltipMysql {
-    visibility: visible;
-}
-
-.spanHtml .tooltipHtml::after, .spanCss .tooltipCss::after, .spanJavascript .tooltipJavascript::after,
-.spanJava .tooltipJava::after, .spanMysql .tooltipMysql::after {
-    content: '';
-    position: absolute;
-    border-style: solid;
-    border-width: 12px;
-    top: 110%;
-    left: 5%;
-    margin: -5px;
-    border-color: white transparent transparent transparent;
-}
-
-.spanJavascript .tooltipJavascript::after {
-    top: 105%;
 }
 
 /* aos 애니메이션 가지고 있는 콘텐츠 뒤로 보내기 */
