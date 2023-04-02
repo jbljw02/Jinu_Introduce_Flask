@@ -95,7 +95,6 @@
                 document.getElementById('contact').style.color = "white";
             })
 
-
             let card = document.querySelector('.contactCard');
             card.addEventListener('click', function (event) {
                 let elem = event.currentTarget;
@@ -110,10 +109,6 @@
             });
         }
         mouseOverOut();
-
-        // $(function () {
-        //     $('.html').tooltip();
-        // });
 
     });
 
