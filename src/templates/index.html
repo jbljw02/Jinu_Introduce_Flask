@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Lee Jinu</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +13,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script type="text/javascript" src="event.js"></script>
-    <script type="text/javascript" src="qrcode.js"></script>
+    <script src="{{ url_for('static', filename='event.js') }}" ></script>
+    <script src="{{ url_for('static', filename='qrcode.js') }}" ></script>
 </head>
 <body>
 <!-- 사진, 소개, 헤더가 있는 영역 -->
     <section class="main" id="main">
-        <img src="img/sec.png" class="img">
+        <img src="{{ url_for('static', filename='img/sec.png') }}" class="img">
         <div class="introduce"></div>
         <script>
             let content = "White-hat \n hacker \n Lee Jinu";
@@ -61,7 +61,7 @@
         </div>
         <hr class="aboutMeWriteLine" >
         <div class="aboutMeDetailArea">
-            <img src="img/face.jpg" class="face">
+            <img src={{ url_for('static', filename='img/face.jpg') }} class="face">
             <div class="aboutMeDetailTitle">
                 안녕하세요, 모의해킹 유망주 이진우라고 합니다.
             </div>
@@ -127,7 +127,7 @@
                 <tr>
                     <td>
                         <span class="spanHtml">
-                            <img src="img/html.png" class="html">
+                            <img src="{{ url_for('static', filename='img/html.png') }}" class="html">
                             <span class="tooltipHtml">
                                 <ul>&nbsp;&nbsp;- Semantic HTML을 준수하여 구조를 설계합니다.</ul>
                                 <ul>&nbsp;&nbsp;- Box model을 어느 정도 이해하고 있습니다.</ul>
@@ -152,7 +152,7 @@
                 <tr>
                     <td>
                         <span class="spanCss">
-                            <img src="img/css.png" class="css">
+                            <img src="{{ url_for('static', filename='img/css.png') }}" class="css">
                             <span class="tooltipCss">
                                 <ul>&nbsp;&nbsp;- 미디어 쿼리와 같은 간단한 CSS문법을 사용할 수 있습니다.</ul>
                                 <ul>&nbsp;&nbsp;- flex를 적극 활용하여 UI를 구성합니다.</ul>
@@ -175,7 +175,7 @@
                 <tr>
                     <td>
                         <span class="spanJavascript">
-                            <img src="img/javascript.png" class="javascript" id="javascript">
+                            <img src="{{ url_for('static', filename='img/javascript.png') }}" class="javascript" id="javascript">
                             <span class="tooltipJavascript">
                                 <ul>&nbsp;&nbsp;- 기초적인 Javascript 문법을 이해하고 있습니다.</ul>
                                 <ul>&nbsp;&nbsp;- 동적 페이지를 위한 간단한 효과들을 구현할 수 있습니다.</ul>
@@ -199,7 +199,7 @@
                 <tr>
                     <td>
                         <span class="spanJava">
-                            <img src="img/java.png" class="java">
+                            <img src="{{ url_for('static', filename='img/java.png') }}" class="java">
                             <span class="tooltipJava">
                                 <ul>&nbsp;&nbsp;- 간단한 문법을 이해하고 프로그램을 작성할 수 있습니다.</ul>
                                 <ul>&nbsp;&nbsp;- 객체지향에 대한 개념을 어느정도 이해하고 있습니다.</ul>
@@ -222,7 +222,7 @@
                 <tr>
                     <td>
                         <span class="spanMysql">
-                            <img src="img/mysql.png" class="mysql">
+                            <img src="{{ url_for('static', filename='img/mysql.png') }}" class="mysql">
                             <span class="tooltipMysql">
                                 <ul>&nbsp;&nbsp;- 간단한 수준의 데이터베이스를 직접 설계 및 구현할 수 있습니다.</ul>
                                 <ul>&nbsp;&nbsp;- 정규화에 대해 이해하고 있습니다.</ul>
@@ -288,7 +288,7 @@
                         </ul>
                 </div>
                 <div class="contactCardFront">
-                    <img src="img/inhatc.png" class="inhatc">
+                    <img src="{{ url_for('static', filename='img/inhatc.png') }}" class="inhatc">
                 </div>
             </div>
         </div>
@@ -301,8 +301,8 @@
                 © by LeeJinu 2023. All rights reserved.
            </span>
             <span class="contactImg">
-                <a target="_blank" href="mailto:jbljw02@naver.com"><img src="img/email.png" class="email"></a>
-                <a target="_blank" href="https://github.com/jbljw02"><img src="img/github.png" class="github"></a>
+                <a target="_blank" href="mailto:jbljw02@naver.com"><img src="{{ url_for('static', filename='img/email.png') }}" class="email"></a>
+                <a target="_blank" href="https://github.com/jbljw02"><img src="{{ url_for('static', filename='img/github.png') }}" class="github"></a>
             </span>
         </div>
     </footer>
